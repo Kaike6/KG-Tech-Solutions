@@ -1,0 +1,245 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  padding-top: 120px;
+}
+
+/* ================= MENU PRIMEIRO ================= */
+/* ================= NAV / TOPO ================= */
+.topo {
+  height: 200px;
+  width: 100%;
+  background-color: #000000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.topo h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #fff, #00ff88);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.topo h1 a{
+  text-decoration: none;
+}
+
+/* ================= MENU ================= */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+
+  margin-top: 15px;
+  padding: 10px 30px;
+
+  background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50px;
+}
+
+.menu:hover {
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.menu li {
+  display: flex;
+
+}
+
+.menu li a {
+  display: block;
+  padding: 12px 22px;
+
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: #000;
+  background-color: #00ff88;
+  box-shadow: 0 0 15px #00ff88;
+  transform: translateY(-3px);
+}
+
+/* ================= HAMBURGUER ================= */
+.hamburguer {
+  display: none;
+  margin-top: 10px;
+
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.loja {
+  padding: 80px 10%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.loja h1 {
+  font-size: 48px;
+  color: #00ff99;
+}
+
+.loja p {
+  margin: 15px 0 50px;
+  color: #aaa;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #0b0b0b;
+  border: 1px solid #00ff9940;
+  border-radius: 15px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.card span {
+  display: block;
+  margin: 15px 0;
+  font-size: 18px;
+  color: #00ff99;
+}
+
+.card button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #00ff99;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 968px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  /* ===== NAV ===== */
+  .topo {
+    position: static;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .topo h1 {
+    font-size: 28px;
+  }
+
+  .hamburguer {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+      background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+  
+
+  .menu.ativo {
+    display: flex;
+  }
+}
+
+@media (max-width: 668px) {
+
+  /* ===== NAV ===== */
+  .topo h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+    .menu {
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+
+    color: #a0a0a0;
+    border-radius: 20px;
+
+    transition: 0.3s;
+  }
+
+  /* 🔥 EFEITO NO TOQUE (igual hover) */
+  .menu li a:active {
+    color: #000;
+    background-color: #00ff88;
+    box-shadow: 0 0 15px #00ff88;
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../segunda-pagina.css/orçamento.css">
+</head>
+<body>
+  
+<main class="orcamento">
+
+  <!-- FORMULÁRIO -->
+  <div class="orcamento-form">
+
+    <header class="topo">
+      <h1>
+        <a href="../html/menu.html">Solicite seu orçamento</a>
+      </h1>
+      <p>Conte um pouco sobre seu projeto e receba uma proposta personalizada.</p>
+    </header>
+
+    <form class="formulario" id="formulario">
+
+      <div class="grupo">
+        <label>Nome</label>
+        <input id="nome" type="text" placeholder="Seu nome completo">
+      </div>
+      <div class="msg" id="msg1"></div>
+
+      <div class="grupo">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="seuemail@email.com">
+      </div>
+      <div class="msg" id="msg2"></div>
+
+      <div class="grupo">
+        <label>WhatsApp</label>
+        <input id="tel" type="tel" placeholder="(99) 99999-9999">
+      </div>
+      <div class="msg" id="msg3"></div>
+
+      <div class="grupo">
+        <label>Tipo de serviço</label>
+        <select id="tipoServico">
+          <option value="">Selecione</option>
+          <option value="institucional">Site institucional</option>
+          <option value="loja">Loja virtual</option>
+          <option value="sistema">Sistema web</option>
+          <option value="manutencao">Manutenção de sistema</option>
+          <option value="landing">Landing page</option>
+          <option value="basico">Site básico</option>
+        </select>
+      </div>
+      <div class="msg" id="msg4"></div>
+
+      <div class="grupo">
+        <label>Prazo desejado</label>
+        <input id="prazo" type="text" placeholder="Ex: 15 dias">
+      </div>
+      <div class="msg" id="msg5"></div>
+
+      <div class="grupo">
+        <label>Descreva seu projeto</label>
+        <textarea id="descricao" placeholder="Explique sua ideia..."></textarea>
+      </div>
+      <div class="msg" id="msg6"></div>
+
+      <button id="btn-solicitar">Solicitar orçamento</button>
+      <p id="cadastrado" class="cadastrado"></p>
+      <p id="erro" class="erro"></p>
+      <a href="../html/menu.html" class="">voltar</a>
+        <span class="seguranca">🔒 Seus dados estão seguros.</span>
+
+    </form>
+  </div>
+
+  <!-- DIFERENCIAIS -->
+
+<!-- JS -->
+<script src="../segunda-paginas.js/orçamento.js"></script>
+</body>
+</html>

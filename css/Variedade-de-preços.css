@@ -1,0 +1,151 @@
+.main2 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-top: 1px solid #fff;
+}
+
+/* ================= TÍTULO ================= */
+.titulo {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 35px;
+  color: #00ff88;
+}
+
+/* ================= GRID ================= */
+.cartalogo {
+  width: 100%;
+  max-width: 1400px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* ================= CARD ================= */
+.cubo {
+  min-height: 650px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(180deg, #0b0b0b, #050505);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.15);
+  transition: 0.3s;
+  margin-right: 20px;
+}
+
+.cubo:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px #00ff88;
+}
+
+/* ================= TEXTOS ================= */
+.cubo h5 {
+  font-size: 24px;
+  text-align: center;
+  color: #00ff88;
+  margin-bottom: 30px;
+}
+
+.descricao {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.plano h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #00ff88;
+}
+
+.preco {
+  display: block;
+  font-size: 20px;
+  margin-top: 4px;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 12px rgba(0,255,136,0.6);
+}
+
+/* ================= LISTA ================= */
+.cubo ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.cubo li {
+  color: #e5e5e5;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.cubo a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+/* ================= BOTÃO ================= */
+.btn-orcamento {
+  margin-top: 30px;
+  padding: 16px;
+  width: 100%;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+
+  background: #00ff88;
+  color: #000;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.btn-orcamento:hover {
+  background: #00cc6e;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* variações opcionais */
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  transform: scale(0.9);
+}
+
+@media (max-width: 668px) {
+
+  .cartalogo{
+    margin-right: 15%;
+  }
+}

@@ -1,0 +1,315 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  padding-top: 120px;
+}
+
+/* ================= MENU PRIMEIRO ================= */
+/* ================= NAV / TOPO ================= */
+.topo {
+  height: 200px;
+  width: 100%;
+  background-color: #000000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.topo h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #fff, #00ff88);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= MENU ================= */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+
+  margin-top: 15px;
+  padding: 10px 30px;
+
+  background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50px;
+}
+
+.menu:hover {
+  background: rgba(0, 255, 136, 0.08);
+}
+
+.menu li {
+  display: flex;
+
+}
+
+.menu li a {
+  display: block;
+  padding: 12px 22px;
+
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: #000;
+  background-color: #00ff88;
+  box-shadow: 0 0 15px #00ff88;
+  transform: translateY(-3px);
+}
+
+/* ================= HAMBURGUER ================= */
+.hamburguer {
+  display: none;
+  margin-top: 10px;
+
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ================= PRIMEIRA PAGINA ================= */
+
+
+/*================== SEGUNDA PAGINA =============== */
+
+
+
+/* ================= TERCEIRA PÁGINA ================= */
+
+
+
+/* ================= terceira PAGINA ================= */
+/* ===== EFEITO SCROLL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 0.8s ease;
+}
+
+.reveal.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* variações opcionais */
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  transform: scale(0.9);
+}
+
+
+/* ================= RESPONSIVO ================= */
+/* ================= RESPONSIVO (TABLETS E CELULARES GRANDES) ================= */
+/* ================= TABLET / TELAS MÉDIAS ================= */
+@media (max-width: 968px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  /* ===== NAV ===== */
+  .topo {
+    position: static;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .topo h1 {
+    font-size: 28px;
+  }
+
+  .hamburguer {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 255, 136, 0.03);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+
+
+  /* ===== HERO / TEXTO ===== */
+  .texto {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .texto img {
+    width: 280px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* ===== FORM ===== */
+  .form-container {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .botoes button {
+    padding: 15px 30px;
+    margin-left: 0;
+  }
+
+  .blocoNotas {
+    width: 100%;
+    max-width: 320px;
+    height: 360px;
+    margin: 0 auto;
+  }
+   #voltar{
+    margin-top: 20px;
+    margin-left: 25%;
+  }
+    .formulario h1{
+    font-size: 30px;
+  }
+    .hero{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  }
+}
+
+/* ================= CELULARES ================= */
+@media (max-width: 668px) {
+
+  /* ===== NAV ===== */
+  .topo h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+    .menu {
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+
+    color: #a0a0a0;
+    border-radius: 20px;
+
+    transition: 0.3s;
+  }
+
+  /* 🔥 EFEITO NO TOQUE (igual hover) */
+  .menu li a:active {
+    color: #000;
+    background-color: #00ff88;
+    box-shadow: 0 0 15px #00ff88;
+    transform: translateY(-3px);
+  }
+  .hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* ===== TEXTO ===== */
+  .texto p {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  /* ===== CATÁLOGO ===== */
+  .cartalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+
+
+  /* ===== FORM ===== */
+  .form-container {
+    padding: 20px 10px;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+
+
+  .botoes {
+    flex-direction: column;
+    
+  }
+
+  .botoes button {
+    width: 100%;
+  }
+  .formulario h1{
+    font-size: 30px;
+  }
+
+}

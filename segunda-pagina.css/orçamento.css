@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 107px;
+  background: linear-gradient(135deg, #050505, #0a1a12, #050505);
+  color: #fff;
+}
+
+.orcamento {
+  width: 500px;
+  
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  margin-top: 40px;
+}
+
+.topo {
+  text-align: center;
+}
+.topo h1 {
+  text-decoration: none;
+  font-size: 40px;
+  padding: 30px;
+}
+
+
+.topo h1 a {
+  color: #00ff88;
+  text-decoration: none;
+}
+
+
+.topo p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 13px;
+  color: #ccc;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #fff;
+    border: 1px solid #888;
+
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  border: 1px solid #888;
+}
+
+button {
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #00ff88;
+  color: #000;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.seguranca {
+  font-size: 15px;
+  color: #888;
+  text-align: center;
+}
+
+.diferenciais h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #00ff88;
+  text-align: center;
+}
+
+.diferenciais ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+.msg{
+  color: red;
+    text-align: center;
+        font-size: 20px;
+
+
+}
+.cadastrado{
+  color: green;
+  text-align: center;
+      font-size: 20px;
+
+}
+
+.erro{
+  color: red;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+.formulario a{
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.formulario a:hover{
+  color: blue;
+}
+
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.4; }
+}
+
+body::before {
+  animation: pulse 8s infinite;
+}
+
+@media (max-width: 668px) {
+    .orcamento {
+    width: 370px;
+    margin-top: 10px;
+    }
+    .diferenciais ul {
+        display: block;
+    }
+    
+}

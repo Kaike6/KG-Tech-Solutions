@@ -1,0 +1,28 @@
+.footer {
+  background-color: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 10px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer .marca {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.footer .marca strong {
+  color: #00ff88;
+  
+}
+
+.footer .creditos {
+  color: #666;
+  font-size: 18px;
+  margin-top: 5px;
+}
