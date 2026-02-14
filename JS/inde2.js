@@ -93,8 +93,8 @@ btnEnviar.addEventListener("click", (e) => {
   }
 
   // Telefone
-  if (inputTelefone.value.length > 10) {
-    msg3.textContent = "numeros deve ter no mínimo 10 números"
+  if (inputTelefone.value.length >= 10) {
+    msg3.textContent = "numero deve ter no mínimo 10 números"
     return
   }
 
