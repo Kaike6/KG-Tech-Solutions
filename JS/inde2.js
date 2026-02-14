@@ -93,10 +93,10 @@ btnEnviar.addEventListener("click", (e) => {
   }
 
   // Telefone
-  if (inputTelefone.value.length >= 10) {
-    msg3.textContent = "numero deve ter no mínimo 10 números"
+  if (inputTelefone.value.length !== 11) {
+    msg3.textContent = "numero deve ter no mínimo 11 números"
     return
-  }
+  } else{}
 
   // ✅ Sucesso
   cadastrado.textContent = `Cadastro feito com sucesso!
