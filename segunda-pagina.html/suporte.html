@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Solicitar Suporte</title>
+  <link rel="stylesheet" href="../segunda-pagina.css/suporte.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎧 Solicitar Suporte</h1>
+    <p>Preencha o formulário abaixo e nossa equipe responderá em breve.</p>
+
+    <form id="formSuporte">
+
+      <div class="input-group">
+        <label>Nome</label>
+        <input type="text" id="nome" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Assunto</label>
+        <select id="assunto" required>
+          <option value="">Selecione</option>
+          <option>Problema Técnico</option>
+          <option>Dúvida</option>
+          <option>Pagamento</option>
+          <option>Outro</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Mensagem</label>
+        <textarea id="mensagem" rows="5" required></textarea>
+      </div>
+
+      <button type="submit">Enviar Solicitação</button>
+
+      <p class="sucesso" id="mensagemSucesso"></p>
+
+    </form>
+  </div>
+
+  <script src="../segunda-paginas.js/suporte.js "></script>
+</body>
+</html>
