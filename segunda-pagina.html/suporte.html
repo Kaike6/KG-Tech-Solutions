@@ -2,50 +2,114 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Solicitar Suporte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Suporte - KG Tech Solutions</title>
   <link rel="stylesheet" href="../segunda-pagina.css/suporte.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>🎧 Solicitar Suporte</h1>
-    <p>Preencha o formulário abaixo e nossa equipe responderá em breve.</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="topo">
+    <h1> <a href="../index.html">KG Tech Solutions</a></h1>
 
-    <form id="formSuporte">
+    <button id="btnMenu" class="hamburguer">☰</button>
 
-      <div class="input-group">
-        <label>Nome</label>
-        <input type="text" id="nome" required>
+    <ul id="menu" class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../segunda-pagina.html/serviço.html">Serviços</a></li>
+      <li><a href="../segunda-pagina.html/historia.html">História</a></li>
+      <li><a href="../segunda-pagina.html/contato.html">Contato</a></li>
+      <li><a href="../segunda-pagina.html/loja.html">Loja</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main class="main4">
+
+    <section class="form-container">
+
+      <!-- TEXTO LATERAL -->
+      <div class="texto-form">
+        <div>
+          <h2>Central de Suporte</h2>
+          <p>
+            Está enfrentando algum problema ou tem dúvidas sobre nossos serviços?
+            Nossa equipe está pronta para ajudar você.
+          </p>
+
+          <p>
+            Preencha o formulário ao lado e retornaremos o mais rápido possível.
+          </p>
+
+          <div class="info-box">
+            <p><strong>⏱ Tempo médio de resposta:</strong> até 24h</p>
+            <p><strong>📧 Atendimento:</strong> suporte@kgtech.com</p>
+          </div>
+        </div>
       </div>
 
-      <div class="input-group">
-        <label>Email</label>
-        <input type="email" id="email" required>
-      </div>
+      <!-- FORMULÁRIO -->
+      <form class="formulario reveal" id="formulario">
 
-      <div class="input-group">
-        <label>Assunto</label>
-        <select id="assunto" required>
-          <option value="">Selecione</option>
-          <option>Problema Técnico</option>
-          <option>Dúvida</option>
-          <option>Pagamento</option>
-          <option>Outro</option>
-        </select>
-      </div>
+  <h1>ABRIR CHAMADO</h1>
 
-      <div class="input-group">
-        <label>Mensagem</label>
-        <textarea id="mensagem" rows="5" required></textarea>
-      </div>
-
-      <button type="submit">Enviar Solicitação</button>
-
-      <p class="sucesso" id="mensagemSucesso"></p>
-
-    </form>
+  <div class="campo">
+    <label for="nome">Nome Completo</label>
+    <input type="text" id="nome" placeholder="Digite seu nome completo">
+    <div class="erro"></div>
   </div>
 
-  <script src="../segunda-paginas.js/suporte.js "></script>
+  <div class="campo">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" placeholder="Digite seu e-mail">
+    <div class="erro"></div>
+  </div>
+
+  <div class="campo">
+    <label for="telefone">Telefone</label>
+    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+    <div class="erro"></div>
+  </div>
+
+  <div class="campo">
+    <label for="categoria">Categoria do Problema</label>
+    <select id="categoria">
+      <option value="">Selecione</option>
+      <option>Problema técnico</option>
+      <option>Dúvida sobre serviço</option>
+      <option>Dúvida sobre site</option>
+      <option>Erro na compra</option>
+      <option>Suporte de login</option>
+      <option>Outro</option>
+    </select>
+    <div class="erro"></div>
+  </div>
+
+  <div class="campo">
+    <label for="mensagem">Descreva o problema</label>
+    <textarea id="mensagem" rows="4"
+      placeholder="Explique detalhadamente o que está acontecendo...">
+    </textarea>
+    <div class="erro"></div>
+  </div>
+
+  <div class="protocolo">
+    Nº do Protocolo: <span id="numeroProtocolo">#0001</span>
+  </div>
+
+<div class="chamado" id="mensagemSucesso"></div>
+
+  <div class="botoes">
+    <button type="submit" id="btn-enviar">Enviar Chamado</button>
+
+  </div>
+
+</form>
+
+    </section>
+
+  </main>
+
+  <script src="../segunda-paginas.js/suporte.js"></script>
 </body>
 </html>

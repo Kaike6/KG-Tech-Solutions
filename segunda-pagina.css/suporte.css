@@ -1,95 +1,320 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ================= BODY ================= */
 body {
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #000;
   color: white;
+  padding-top: 120px;
+}
+
+/* ================= MENU PRIMEIRO ================= */
+/* ================= NAV / TOPO ================= */
+.topo {
+  height: 200px;
+  width: 100%;
+  background-color: #000000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+
+  border-bottom: 1px solid white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-.container {
-  background-color: #111;
-  padding: 40px;
-  border-radius: 15px;
-  width: 500px;
-  box-shadow: 0 0 15px #00ff88;
-  animation: fadeIn 0.8s ease-in-out;
+.topo h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #fff, #00ff88);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 10px;
+/* ================= MENU ================= */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+
+  margin-top: 15px;
+  padding: 10px 30px;
+
+  background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50px;
 }
 
-p {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 14px;
-  color: #aaa;
+.menu:hover {
+  background: rgba(0, 255, 136, 0.08);
 }
 
-.input-group {
-  margin-bottom: 15px;
+.menu li {
+  display: flex;
+
 }
 
-label {
+.menu li a {
   display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
-}
+  padding: 12px 22px;
 
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background-color: #222;
-  color: white;
-}
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
 
-input:focus, select:focus, textarea:focus {
-  border: 1px solid cyan;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #00ff88;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
+  border-radius: 30px;
   transition: 0.3s;
 }
 
-button:hover {
-  background: #0f883e;
-  transform: scale(1.03);
+.menu li a:hover {
+  color: #000;
+  background-color: #00ff88;
+  box-shadow: 0 0 15px #00ff88;
+  transform: translateY(-3px);
 }
 
-.sucesso {
-  text-align: center;
-  margin-top: 15px;
+/* ================= HAMBURGUER ================= */
+.hamburguer {
+  display: none;
+  margin-top: 10px;
+
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ================= MAIN & CONTAINER ================= */
+.main4 {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin-top: 4%;
+}
+
+.form-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== TEXTO LATERAL ===== */
+.texto-form h2 {
+  font-size: 32px;
   color: #00ff88;
+  font-weight: 700;
+}
+
+.texto-form p {
+  margin-bottom: 20px;
+  color: #b0b0b0;
+  font-size: 17px;
+}
+
+.info-box {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(0, 255, 136, 0.05);
+  border-left: 4px solid #00ff88;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.formulario h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00ff88;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.campo label {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #00ff88;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.campo textarea {
+  resize: vertical; /* Impede quebrar o layout horizontalmente */
+  min-height: 100px;
+   resize: none;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: #00ff88;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+/* ===== BOTÕES ===== */
+.botoes {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.botoes button {
+  flex: 1;
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#btn-enviar {
+  background: #00ff88;
+  color: #000;
+}
+
+#btn-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 255, 136, 0.4);
+  filter: brightness(1.1);
+}
+
+.erro {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.enviado {
+  color: #00cc6a;
+  font-size: 14px;
+  margin-top: 10px;
   font-weight: bold;
 }
+.chamado{
+  text-align: center;
+    color: #00cc6a;
+  margin-top: 10px;
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
+}
+
+
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 992px) {
+  .form-container {
+    grid-template-columns: 1fr;
+    max-width: 700px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  body {
+    padding-top: 240px;
+  }
+}
+
+@media (max-width: 968px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  /* ===== NAV ===== */
+  .topo {
+    position: static;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .topo h1 {
+    font-size: 28px;
+    list-style: none;
+    text-decoration: none;
+  }
+    .topo h1 a{
+    text-decoration: none;
+  }
+
+  .hamburguer {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+      background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  }
+  
+
+  .menu.ativo {
+    display: flex;
+  }
+
+  .form-container {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+
+  .botoes {
+    flex-direction: column;
   }
 }
